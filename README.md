@@ -4,8 +4,10 @@ This project demonstrates a simple approach to adding modding capabilities to a 
 
 ## Limitations
 
-- **Version Consistency:** Both the main application and plugins must use the same Bevy version and dynamically link Bevy using the `bevy/dynamic_linking` feature.
-- **Component Sharing:** Components intended for use by plugins must reside in a separate dynamic library (dylib) crate and should not be subdirectory of the main application (?).
+- Both the main application and plugins must use the same Bevy version and dynamically link Bevy using the `bevy/dynamic_linking` feature.
+- Components intended for use by plugins must reside in a separate dynamic library (dylib) crate and should not be subdirectory of the main application (?).
+- No WASM
+- Unsafe Code
 
 ## Getting Started
 
