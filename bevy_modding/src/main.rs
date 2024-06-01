@@ -3,10 +3,7 @@ use bevy::{
     sprite::{MaterialMesh2dBundle, Mesh2dHandle},
 };
 
-#[allow(unused_imports)]
-use bevy_modding_types;
-
-// use bevy_modding_types::Character;
+use bevy_modding_types::Character;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut app = App::new();
@@ -34,7 +31,7 @@ fn setup(
     commands.spawn(Camera2dBundle::default());
 
     commands.spawn((
-        bevy_modding_types::Character,
+        Character,
         Name::new("Test"),
         MaterialMesh2dBundle {
             mesh: Mesh2dHandle(meshes.add(Circle { radius: 50.0 })),
